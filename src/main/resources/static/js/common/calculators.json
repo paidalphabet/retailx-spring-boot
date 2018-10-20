@@ -1,0 +1,8 @@
+{
+	EDUCATION :{
+		templateURL    : "#/education",
+		calculatorType : "EDUCATION",
+		icon           : "images/graduate.png"
+	},
+	elements : 1	
+}
