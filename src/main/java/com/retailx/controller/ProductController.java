@@ -6,11 +6,7 @@ import com.retailx.models.Product;
 import com.retailx.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(value="/product")
@@ -56,9 +52,9 @@ public class ProductController {
     }
   }
 
-  @RequestMapping(value="/", method = RequestMethod.GET)
+  @RequestMapping(value="/{code}", method = RequestMethod.GET)
   @ResponseBody
-  public Product getProduct(@RequestParam(name="code") final long code) {
+  public Product getProduct(@PathVariable(name="code") long code) {
     try {
       return mProductDao.getById(code);
     }
@@ -70,20 +66,18 @@ public class ProductController {
 
   //UPDATE
 
-  @RequestMapping(value="/update" , method = RequestMethod.PUT)
+  @RequestMapping(value="/update" , method = RequestMethod.POST)
   @ResponseBody
-  public Boolean update(
-      final Product product
-  ) {
+  public Product update(final Product product) {
     System.out.println("Got here...");
     try {
       mProductDao.update(product);
     }
     catch(final Exception ex) {
       ex.printStackTrace();
-      return false;
+      return product;
     }
-    return true;
+    return product;
   }
 
   // DELETE

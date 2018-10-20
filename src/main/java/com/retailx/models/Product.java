@@ -34,7 +34,18 @@ public class Product extends BaseObject {
     @Column(name = "hotlist")
     private Boolean hotlist;
 
-    public Product(long code, String productName, String description, Double price, Double quantity, Double costPrice, String barCode, Boolean hotlist) {
+    public String getScale() {
+        return this.scale;
+    }
+
+    public void setScale(String scale) {
+        this.scale = scale;
+    }
+
+    @Column(name="scale")
+    private String scale;
+
+    public Product(long code, String productName, String description, Double price, Double quantity, Double costPrice, String barCode, Boolean hotlist, String scale) {
         this.code = code;
         this.productName = productName;
         this.description = description;
@@ -43,6 +54,7 @@ public class Product extends BaseObject {
         this.costPrice = costPrice;
         this.barCode = barCode;
         this.hotlist = hotlist;
+        this.scale = scale;
     }
 
     public Product() {

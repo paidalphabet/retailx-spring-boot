@@ -24,6 +24,7 @@
 <script type="text/javascript" src="js/jquery/jquery.numeric.js"></script>
 <script type="text/javascript" src="js/angular/angular.min.js"></script>
 <script type="text/javascript" src="js/angular/angular-route.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
 <script type="text/javascript" src="js/common/ajax/ajax.js"></script>
 <script type="text/javascript" src="js/common/form/validation.js"></script>
 <script type="text/javascript" src="js/common/app.js"></script>

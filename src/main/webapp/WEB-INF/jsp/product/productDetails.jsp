@@ -14,36 +14,38 @@
                             <form role="form">
                                 <div class="form-group">
                                     <label>Code</label>
-                                    <input class="form-control" ng-model="product.code" />
+                                    <input class="form-control" disabled="disabled" ng-model="product.code"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input class="form-control" ng-model="product.productName" />
+                                    <input class="form-control" ng-model="product.productName"/>
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea class="form-control" ng-model="product.description" />
+                                    <textarea class="form-control" ng-model="product.description"/>
                                 </div>
 
                             </form>
                         </div>
                         <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Price</label>
-                                    <input class="form-control" ng-model="product.price">
-                                </div>
-                                <div class="form-group">
-                                    <label>costPrice</label>
-                                    <input class="form-control" ng-model="product.costPrice">
-                                </div>
-                                <div class="form-group">
-                                    <label>HotList</label>
-                                    <input type = "checkbox" class="" ng-model="product.hotlist">
-                                </div>
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input class="form-control" ng-model="product.price">
+                            </div>
+                            <div class="form-group">
+                                <label>costPrice</label>
+                                <input class="form-control" ng-model="product.costPrice">
+                            </div>
+                            <div class="form-group">
+                                <label>HotList</label>
+                                <input type="checkbox" class="" ng-model="product.hotlist">
+                            </div>
 
                         </div>
-                     <div class="col-md-3">
-                     </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-success" ng-click="saveProduct()">Save</button>
+                            <button class="btn btn-success">Clear</button>
+                        </div>
                     </div>
                 </div>
             </div>
