@@ -23,10 +23,11 @@
 <script type="text/javascript" src="js/jquery/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="js/jquery/jquery.numeric.js"></script>
 <script type="text/javascript" src="js/angular/angular.min.js"></script>
-<script type="text/javascript" src="js/angular/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/angular/angular-route.min.js"></script>
 <script type="text/javascript" src="js/common/ajax/ajax.js"></script>
 <script type="text/javascript" src="js/common/form/validation.js"></script>
 <script type="text/javascript" src="js/common/app.js"></script>
+<script type="text/javascript" src="js/angular/controllers/product.js"></script>
 <style type="text/css">
 @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
 </style>

@@ -26,7 +26,7 @@ public class AngularRequestController extends BaseController {
 
     @RequestMapping(value = "/pages/jsp/{common}/{trailing}", method = RequestMethod.GET)
     public ModelAndView pages(@PathVariable final String common, @PathVariable final String trailing, final ModelMap model, final HttpServletRequest request) throws RetailxException {
-        final String view = "jsp/" + common + "/" + trailing;
+        final String view = common + "/" + trailing;
         return new ModelAndView(view);
     }
 }
