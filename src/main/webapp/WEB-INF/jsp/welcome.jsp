@@ -6,11 +6,14 @@
 	</head>
 	<body ng-app="retailx" id ="page-top">
 			<%@ include file="common/header.jsp" %>
-		<div class="wrapper">
+		<div id="wrapper">
 			 <%@ include file="common/sidebar.jsp" %>
-			<div ui-view>
-				<%@ include file="homeContent.jsp" %>
-			</div>
+             <div id="content-wrapper">
+                 <div class="container-fluid">
+                    <div ng-view>
+                    </div>
+                 </div>
+             </div>
 			<%@ include file="common/footer.jsp" %>
 		</div>
 	</body>
