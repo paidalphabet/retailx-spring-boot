@@ -1,6 +1,6 @@
 <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#/product/">
+          <a class="nav-link" href="#/product/?code=-123">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Product</span>
           </a>
@@ -22,13 +22,13 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://blackrockdigital.github.io/startbootstrap-sb-admin/charts.html">
+          <a class="nav-link" href="#/productList/">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
+            <span>Product List</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://blackrockdigital.github.io/startbootstrap-sb-admin/tables.html">
+          <a class="nav-link" href="#/sale/">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>Sale</span></a>
         </li>
       </ul>

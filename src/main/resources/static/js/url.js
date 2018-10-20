@@ -1,1 +1,1 @@
-var appUrl = "http://www.wisegoals.in/";
+var appUrl = "http://localhost:8080/";
