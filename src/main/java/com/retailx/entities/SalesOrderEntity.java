@@ -6,9 +6,6 @@ import java.util.Map;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
-/**
- * Created by Shittu on 31/05/2016.
- */
 public class SalesOrderEntity {
   private long orderNumber;
   private Map<String, Object> customer;

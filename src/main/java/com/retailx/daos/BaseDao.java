@@ -70,5 +70,5 @@ public abstract class BaseDao<T> {
   }
 
   @PersistenceContext
-  private EntityManager entityManager;
+  protected EntityManager entityManager;
 }

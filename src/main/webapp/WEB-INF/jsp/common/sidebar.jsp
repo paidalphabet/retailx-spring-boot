@@ -1,6 +1,6 @@
 <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#/product/?code=-123">
+          <a class="nav-link" href="/product/view">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Product</span>
           </a>
@@ -22,12 +22,12 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#/productList/">
+          <a class="nav-link" href="/product/list/">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Product List</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#/sale/">
+          <a class="nav-link" href="/sale/view?mode=new">
             <i class="fas fa-fw fa-table"></i>
             <span>Sale</span></a>
         </li>

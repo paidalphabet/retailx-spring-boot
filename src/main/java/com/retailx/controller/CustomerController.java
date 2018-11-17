@@ -3,13 +3,12 @@ package com.retailx.controller;
 import com.retailx.daos.CustomerDao;
 import com.retailx.entities.CustomerList;
 import com.retailx.models.Customer;
+import com.retailx.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by Shittu on 29/05/2016.
@@ -22,6 +21,9 @@ public class CustomerController {
     // Private fields
     @Autowired
     private CustomerDao mCustomerDao;
+
+    @Autowired
+    private CustomerService customerService;
 
     // READ
 
@@ -56,6 +58,13 @@ public class CustomerController {
             return null;
         }
     }
+
+    @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Customer> getCustomerByName(@PathVariable String name) {
+        return customerService.getCustomerByName(name);
+    }
+
 
     //UPDATE
 

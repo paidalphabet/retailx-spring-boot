@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.retailx.common.BaseObject;
@@ -17,7 +18,8 @@ import com.retailx.common.BaseObject;
  */
 @Entity
 @Table(name = "customers")
-@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties()
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Customer extends BaseObject {
 
   @Id

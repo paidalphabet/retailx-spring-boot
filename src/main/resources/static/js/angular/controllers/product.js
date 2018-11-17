@@ -38,12 +38,12 @@ routerApp.controller("product", function($scope, $http, $location, $window, $rou
         response.error(console.log("error"));
     }
 
+
     var code = $routeParams.code;
-    if(code == -123){
-    }
-    else{
+    if(code != -123){
         $scope.loadProductDetails(code);
     }
+
 
 
 });
