@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.retailx.common.BaseObject;
 
 /**
- * Created by Shittu on 29/05/2016.
+ *
  */
 @Entity
 @Table(name = "sales_orders")
