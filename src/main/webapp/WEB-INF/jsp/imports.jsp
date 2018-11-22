@@ -21,10 +21,12 @@
 <link href="/css/dataTables.bootstrap4.css" rel="stylesheet">
 <link href="/css/sb-admin.css" rel="stylesheet">
 <link href="/css/font-awesome-4.4.0/css/font-awesome.css" rel="stylesheet">
+<link href="/css/magicsuggest-min.css" rel="stylesheet">
 
 
-<script type="text/javascript" src="js/common/application-constants.js"></script>
-<script type="text/javascript" src="js/url.js"></script>
-<script type="text/javascript" src="js/baseurl.js"></script>
-<script type="text/javascript" src="js/jquery/jquery-2.1.4.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+<script type="text/javascript" src="/js/common/application-constants.js"></script>
+<script type="text/javascript" src="/js/url.js"></script>
+<script type="text/javascript" src="/js/baseurl.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/js/jquery/magicsuggest-min.js"></script>
+<script type="text/javascript" src="/js/angular/controllers/sale.js"></script>

@@ -1,5 +1,6 @@
 package com.retailx.controller;
 
+import com.retailx.controller.common.RequestConstants;
 import com.retailx.daos.CustomerDao;
 import com.retailx.entities.CustomerList;
 import com.retailx.models.Customer;
@@ -8,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -61,7 +64,10 @@ public class CustomerController {
 
     @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
     @ResponseBody
-    public List<Customer> getCustomerByName(@PathVariable String name) {
+    public List<Customer> getCustomerByName(@PathVariable String name, HttpServletRequest request, HttpServletResponse response) {
+        if(RequestConstants.UNDEFINED.equalsIgnoreCase(name)){
+            name = request.getParameter(RequestConstants.QUERY);
+        }
         return customerService.getCustomerByName(name);
     }
 

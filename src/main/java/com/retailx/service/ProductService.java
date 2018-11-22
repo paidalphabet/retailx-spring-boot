@@ -7,6 +7,7 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.oned.Code39Writer;
 import com.retailx.daos.ProductDao;
+import com.retailx.models.Customer;
 import com.retailx.models.Product;
 import com.retailx.service.common.AbstractService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Service
 public class ProductService extends AbstractService {
+
+
+    Logger LOGGER = Logger.getLogger(ProductService.class.getName());
 
     @Autowired
     private ProductDao theProductDao;
@@ -39,5 +44,11 @@ public class ProductService extends AbstractService {
 
     public List<Product> getAllProducts(){
         return theProductDao.getAll();
+    }
+
+    public List<Product> getProductByName(String name) {
+        LOGGER.info("Getting Products By : " + name);
+        return theProductDao.getProductByName(name);
+
     }
 }

@@ -4,7 +4,7 @@
 <head>
     <%@ include file="../imports.jsp" %>
 </head>
-<body ng-app="retailx" id ="page-top">
+<body ng-app="retailx" id="page-top">
 <%@ include file="../common/header.jsp" %>
 <div id="wrapper">
     <%@ include file="../common/sidebar.jsp" %>
@@ -25,12 +25,25 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <form:select path="salesorder.customerID" items="${customers}">
-
-                                                </form:select>
+                                                <label class="form-group">Customer</label>
+                                                <div id="customer"></div>
                                             </div>
-                                        </div>
+
+                                            <form:form modelAttribute="salesorder">
+                                                <div class="row">
+                                                    <div class="margin10">
+                                                        <form:hidden name="customerID" id="customerID" path="customerID" class="form-control" disabled="true"></form:hidden>
+                                                        <span>Name
+                                                        <form:input name="customerName" id="customerName" path="customerName"  disabled="true"></form:input>
+                                                        Credit
+                                                        <form:input name="customerCredit" id="customerCredit" path="customerCredit" disabled="true"></form:input>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div id ="product"/>
+                                        </form:form>
                                     </div>
+                                        <div class="col-lg-6">rrr</div>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +52,8 @@
             </div>
         </div>
     </div>
-    <%@ include file="../common/footer.jsp" %>
+</div>
+<%@ include file="../common/footer.jsp" %>
 </div>
 </body>
 </html>

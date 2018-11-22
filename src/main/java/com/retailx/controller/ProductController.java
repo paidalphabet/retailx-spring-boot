@@ -1,7 +1,7 @@
 package com.retailx.controller;
 
+import com.retailx.controller.common.RequestConstants;
 import com.retailx.daos.ProductDao;
-import com.retailx.entities.ProductList;
 import com.retailx.models.Product;
 import com.retailx.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -106,4 +106,14 @@ public class ProductController {
         ModelMap modelMap = new ModelMap();
         return new ModelAndView(model, "command", new Product());
     }
+
+    @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Product> getProductByName(@PathVariable String name, HttpServletRequest request, HttpServletResponse response) {
+        if(RequestConstants.UNDEFINED.equalsIgnoreCase(name)){
+            name = request.getParameter(RequestConstants.QUERY);
+        }
+        return productService.getProductByName(name);
+    }
+
 }
